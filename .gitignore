@@ -1,0 +1,24 @@
+# ASP.NET Core
+bin/
+obj/
+*.db
+*.db-shm
+*.db-wal
+
+# React
+ReactClient/node_modules/
+ReactClient/build/
+ReactClient/dist/
+todoclient/node_modules/
+todoclient/build/
+
+# VS Code / JetBrains
+.vscode/
+.idea/
+
+# Visual Studio
+.vs/
+TodoListApi/.vs/
+
+# Docker
+*.log

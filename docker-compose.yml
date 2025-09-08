@@ -1,0 +1,27 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: todolist-api
+    ports:
+      - "8080:5000"
+    depends_on:
+      - db
+    environment:
+      ASPNETCORE_URLS: "http://+:5000"
+      ConnectionStrings__DefaultConnection: "Server=db,1433;Database=DbTodoList;User=sa;Password=@dmin123;TrustServerCertificate=True"
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: todolist-db
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "@dmin123"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - sql_data:/var/opt/mssql
+
+volumes:
+  sql_data:
