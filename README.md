@@ -82,5 +82,3 @@ Server=db,1433;Database=DbTodoList;User=sa;Password=@dmin123;TrustServerCertific
 - Port conflicts: change `8080:5000` in `docker-compose.yml` if 8080 is in use.
 - EF tools not found: open a new terminal after `dotnet tool install -g dotnet-ef` or add the dotnet tools path to your `PATH`.
 
-## License
-This project is for educational purposes.
